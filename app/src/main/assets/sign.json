@@ -1,0 +1,23 @@
+{
+  "Alto":{
+    "title": "Señal de Alto",
+    "desc": "Su uso siempre debe determinarse mediante un estudio de las condiciones locales de tránsito. en general esta señal debe colocarse en los siguientes casos de intersecciones a nivel : 1.En la intersección de dos vialidades primarias 2.En la intersección de una vialidad secundaria con una vialidad primaria 3.En la intersección de cualquier vialidad de una vía férrea 4.En las intersecciones urbanas donde exista la posibilidad de que se den accidentes. En todos los casos, la señal se coloca sobre la vialidad de menor aforo vehicular, en el lugar preciso donde deben detenerse los vehículos."
+  },
+  "EstacionamientoProhibido": {
+    "title": "Estacionamiento Prohibido",
+    "desc": "Se utiliza en aquellos lugares en los que está completamente prohibido el estacionamiento de vehículos."
+  },
+  "CedaelPaso": {
+    "title": "Ceda el Paso",
+    "desc": "Esta señal indica que el conductor debe disminuir la velocidad del vehículo o detenerse cuando sea necesario ceder el paso al tránsito con el que se va a cruzar o incorporar."
+  },
+  "VelocidadMaxima": {
+    "title": "Ceda el Paso",
+    "desc": "Esta señal indica que el conductor debe disminuir la velocidad del vehículo o detenerse cuando sea necesario ceder el paso al tránsito con el que se va a cruzar o incorporar."
+  },
+  "VelocidadMaximaZE": {
+    "title": "Velocidad Máxima para Zona Escolar",
+    "desc": "Se coloca en la acera donde empieza el edificio escolar, marcando para estos casos una velocidad máxima de 20 Km/h. También se coloca en forma anticipada en lo cruces definidos en la planificación de rutas escolares que no necesitan control especial, mancando es éstos una velocidad máxima de 40 km/h."
+  }
+
+}

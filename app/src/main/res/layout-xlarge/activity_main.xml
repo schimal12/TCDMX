@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.example.cantucky.tcdmx.MainActivity"
+    android:background="#ffffff">
+
+    <ImageButton
+        android:layout_width="@dimen/botonfalso"
+        android:layout_height="@dimen/botonfalso"
+        android:id="@+id/reglamento"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/reglamentito"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff"
+        android:onClick="goReglamento"/>
+
+    <ImageButton
+        android:layout_width="@dimen/botonfalso"
+        android:layout_height="@dimen/botonfalso"
+        android:id="@+id/camaras"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/camaritas"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:background="#ffffff"
+        android:onClick="goCamaras"/>
+
+    <ImageButton
+        android:layout_width="@dimen/botonfalso"
+        android:layout_height="@dimen/botonfalso"
+        android:id="@+id/mapapa"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/mapabien"
+        android:background="#ffffff"
+        android:onClick="goMapa"/>
+
+    <ImageButton
+        android:layout_width="@dimen/botonfalso"
+        android:layout_height="@dimen/botonfalso"
+        android:id="@+id/sop"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:layout_alignBottom="@+id/camaras"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:src="@drawable/sopsgn"
+        android:background="#ffffff"
+        android:onClick="goSop"/>
+
+    <ImageButton
+        android:layout_width="@dimen/botonfalso"
+        android:layout_height="@dimen/botonfalso"
+        android:id="@+id/placas"
+        android:adjustViewBounds="true"
+        android:scaleType="centerInside"
+        android:src="@drawable/checav"
+        android:background="#ffffff"
+        android:onClick="goPlaca"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true" />
+
+</RelativeLayout>

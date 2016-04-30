@@ -1,0 +1,59 @@
+{
+  "pois":[{
+    "name" : "Viaducto y Patriotismo",
+    "latitude" : 19.3994864,
+    "longitude" : -99.1800981
+  },
+    {
+      "name" : "El segundo piso del periferico, entre Aureliano Rivera y Pino",
+      "latitude" : 19.3364499,
+      "longitude" : -99.2056293
+
+    },
+    {
+      "name" : "Avenida Alvaro Obregon",
+      "latitude" : 19.4180185,
+      "longitude" : -99.1625698
+
+    },
+    {
+      "name": "Calzada Ignacio Zaragoza, entre Canal de San Juan y Avenida Central",
+      "latitude": 19.3979594,
+      "longitude": -99.061154
+    },
+    {
+      "name": "Avenida R�o Becerra y calle 11 de Abril",
+      "latitude": 19.3957037,
+      "longitude": -99.1897944
+    },
+    {
+      "name": "Calzada de Tlalpan al cruce con Rio Churubusco",
+      "latitude":19.3562158,
+      "longitude": -99.1464538
+    },
+    {
+      "name": "Perif�rico esquina Insurgentes",
+      "latitude": 19.3038358,
+      "longitude": -99.1916946
+    },
+    {
+      "name": "Avenida Oceania frente al Metro Bosques de Aragon",
+      "latitude": 19.4589116,
+      "longitude": -99.070335
+    },
+    {
+      "name": "Eje 3 Oriente frente al Bachilleres 3",
+      "latitude": 19.3856224,
+      "longitude": -99.1126376
+    },
+    {
+      "name": "Churubusco y La Viga",
+      "latitude": 19.3690601,
+      "longitude": -99.1246898
+    },
+    {
+      "name": "Viaducto y Troncoso",
+      "latitude": 19.4058056,
+      "longitude": -99.1150796
+    }]
+}
