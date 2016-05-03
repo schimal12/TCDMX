@@ -4,6 +4,7 @@ import android.app.ListActivity;
 import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.TextView;
 
 import com.google.android.gms.maps.CameraUpdateFactory;
@@ -39,6 +40,7 @@ public class CamarasActivity extends ListActivity implements OnMapReadyCallback 
         textView = (TextView)findViewById(R.id.camaraTitulo);
         MapFragment mapFragment = (MapFragment)getFragmentManager().findFragmentById(R.id.mapaFragment);
         mapFragment.getMapAsync(this);
+        setTitle("Camaras");
     }
 
     @Override
@@ -48,6 +50,7 @@ public class CamarasActivity extends ListActivity implements OnMapReadyCallback 
         this.googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
         this.googleMap.addMarker(new MarkerOptions().position(latLng).title("Le Tec").icon(BitmapDescriptorFactory.fromResource(R.mipmap.ic_launcher)));
         this.googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12.0f));
+
 
         CargaCamaraAsync cargaCamaraAsync = new CargaCamaraAsync(this, this.googleMap);
         cargaCamaraAsync.execute("cositas.json");

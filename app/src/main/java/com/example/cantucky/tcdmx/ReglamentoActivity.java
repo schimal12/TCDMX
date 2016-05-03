@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.inputmethod.InputMethodManager;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -32,6 +33,8 @@ public class ReglamentoActivity extends AppCompatActivity {
         texto2 = (TextView) findViewById(R.id.texto2);
         texto3 = (TextView) findViewById(R.id.texto3);
         reglamento = (TextView)findViewById(R.id.articulos);
+
+        setTitle("Reglamento de Transito");
     }
 
     public void cargaDatos(View view) {
@@ -57,6 +60,11 @@ public class ReglamentoActivity extends AppCompatActivity {
             buscarPalabras(textoA, textoB, textoC);
             mostrarArticulos();
         }
+        InputMethodManager inputManager = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
     private void mostrarArticulos() {
@@ -67,7 +75,12 @@ public class ReglamentoActivity extends AppCompatActivity {
             float multa = encontradoTmp.getSansion()*71.68f;
             general += encontradoTmp.toString()+"\nMulta: $"+multa+"\n\n";
         }
-        reglamento.setText(general);
+        if(!general.isEmpty()) {
+            reglamento.setText(general);
+        }else{
+            general = "No se encontraron Artículos con estos criterios";
+            reglamento.setText(general);
+        }
     }
 
     private void buscarPalabras(String texto1, String texto2, String texto3) {

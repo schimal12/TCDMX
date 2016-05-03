@@ -32,7 +32,8 @@ public class PerfilPersonal extends AppCompatActivity {
 
     private TextView bienvenido, coche, placa, infracciones;
 
-    private String usuarioIntent;
+    private String usuarioIntent, placo;
+
 
     private String usuarioBase = null, usuarioPass = null, usuarioPlaca = null, usuarioId = null;
     @Override
@@ -46,11 +47,8 @@ public class PerfilPersonal extends AppCompatActivity {
         Bundle extras = getIntent().getExtras();
         usuarioIntent= extras.getString("Usuario1");
         llenarConConsultaSQL();
-    }
-
-    public void goMain(View view){
-        Intent it =new  Intent(this, MainActivity.class);
-        startActivity(it);
+        setTitle("Tu Perfil");
+        // placo = extras.getString("placa");
     }
 
     private void llenarConConsultaSQL() {
@@ -142,5 +140,10 @@ public class PerfilPersonal extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
+    }
+    public void goMain(View view){
+        Intent it =new  Intent(this, MainActivity.class);
+        it.putExtra("placa",usuarioPlaca);
+        startActivity(it);
     }
 }

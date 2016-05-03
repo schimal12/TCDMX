@@ -40,8 +40,8 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
      */
     private GoogleApiClient client;
     private GoogleMap googleMap;
-    private double latitude;
-    private double longitude;
+    private double latitude1;
+    private double longitude1;
     private String[] Calles80 = {"Interior","Periferico","Poniente","Insgurgentes Norte","Zaragoza","Tlalpan","Constituyentes","Nacional","Serdan"};
     private String[] Calles50 = {"Eje","Central","Reforma","Mexico Xochimilco","Universidad","Camarones","Molina","Guadalupe","Observatorio"};
     private TextView calle, velocidad;
@@ -53,6 +53,7 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
         velocidad = (TextView)findViewById(R.id.velocidad);
         MapFragment mapFragment = (MapFragment)getFragmentManager().findFragmentById(R.id.fragment);
         mapFragment.getMapAsync(this);
+        setTitle("Mapa de Velocidades");
 
         btnShowLocation = (Button) findViewById(R.id.button);
 
@@ -61,19 +62,21 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
 
             @Override
             public void onClick(View arg0) {
-                // create class object
+
                 gps = new GPSTracker(MapaActivity.this);
 
-                // check if GPS enabled
                 if (gps.canGetLocation()) {
 
-                    latitude = gps.getLatitude();
-                    longitude = gps.getLongitude();
+                    LatLng pruebaFer = new LatLng(19.284082,-99.1391692);
+
+                    latitude1 = pruebaFer.latitude;
+                    longitude1 = pruebaFer.longitude;
+
 
                     Location loc;
                     loc = new Location("Loc");
-                    loc.setLatitude(latitude);
-                    loc.setLongitude(longitude);
+                    loc.setLatitude(latitude1);
+                    loc.setLongitude(longitude1);
 
                     LatLng latLng = new LatLng(loc.getLatitude(), loc.getLongitude());
                     googleMap.moveCamera(CameraUpdateFactory.newLatLng(latLng));
@@ -132,11 +135,11 @@ public class MapaActivity extends AppCompatActivity implements OnMapReadyCallbac
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    String s = longitude + "\n" + latitude + "\n\nMy Current City is: "
+                    String s = longitude1 + "\n" + latitude1 + "\n\nMy Current City is: "
                             + cityName;
                     Log.d("Localizacion", "Loc: " + s);
                     // \n is for new line
-                    Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude + "\nLong: " + longitude, Toast.LENGTH_LONG).show();
+                    Toast.makeText(getApplicationContext(), "Your Location is - \nLat: " + latitude1 + "\nLong: " + longitude1, Toast.LENGTH_LONG).show();
                 } else {
                     // can't get location
                     // GPS or Network is not enabled

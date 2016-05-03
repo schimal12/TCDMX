@@ -22,12 +22,15 @@ public class LoginActivity extends AppCompatActivity {
 
     private EditText user, pass;
     private String placa;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         user = (EditText)findViewById(R.id.User);
         pass = (EditText)findViewById(R.id.Pass);
+
+        setTitle("Log In");
     }
     public void seVa(View view) {
 

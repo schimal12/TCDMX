@@ -21,6 +21,8 @@ public class RegisterActivity extends AppCompatActivity {
         pass = (EditText)findViewById(R.id.pass);
         pass2 = (EditText)findViewById(R.id.confirm);
         placa = (EditText)findViewById(R.id.penplate);
+
+        setTitle("Registro");
     }
     public void seValel(View view){
 

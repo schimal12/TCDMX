@@ -641,7 +641,7 @@ public class LeagueActivity extends Activity implements SampleApplicationControl
     public void createProductTexture(String bookJSONUrl)
     {
         // gets book url from parameters
-         metaData = bookJSONUrl.trim();
+        metaData = bookJSONUrl.trim();
 
         // Cleans old texture reference if necessary
         if (mBookDataTexture != null)
@@ -673,12 +673,12 @@ public class LeagueActivity extends Activity implements SampleApplicationControl
             InputStream inputStream = null;
             try
             {
-                 inputStream = getAssets().open("sign.json");
+                inputStream = getAssets().open("sign.json");
 
                 if (inputStream == null)
                 {
                     // Cleans book data variables
-                   // comic = null;
+                    // comic = null;
                     snal = null;
                     mBookInfoStatus = BOOKINFO_NOT_DISPLAYED;
                     // Hides loading dialog

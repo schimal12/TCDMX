@@ -41,6 +41,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.Iterator;
+import android.view.inputmethod.InputMethodManager;
 
 public class PlacasActivity extends AppCompatActivity {
 
@@ -70,6 +71,8 @@ public class PlacasActivity extends AppCompatActivity {
         placas.setText(PlacaUsuario);
         progressDialog = new ProgressDialog(this);
         progressDialog.setTitle("Loading Data . . . ");
+
+        setTitle("Consultar Placas");
     }
 
     public void cargarDatos(View v){
@@ -94,6 +97,11 @@ public class PlacasActivity extends AppCompatActivity {
             String url = "http://datos.labplc.mx/movilidad/vehiculos/" + placas1 + ".json";
             consumirJsonPlacas(url);
         }
+        InputMethodManager inputManager = (InputMethodManager)
+                getSystemService(Context.INPUT_METHOD_SERVICE);
+
+        inputManager.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(),
+                InputMethodManager.HIDE_NOT_ALWAYS);
     }
 
     private void consumirJsonPlacas(String url) {
