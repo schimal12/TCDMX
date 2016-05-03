@@ -25,7 +25,8 @@
         android:id="@+id/Pass"
         android:layout_centerVertical="true"
         android:layout_centerHorizontal="true"
-        android:hint="Password" />
+        android:hint="Password"
+        android:inputType="textPassword"/>
 
     <ImageButton
         android:layout_width="wrap_content"

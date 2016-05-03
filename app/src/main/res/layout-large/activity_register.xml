@@ -23,7 +23,8 @@
         android:hint="Password"
         android:layout_centerVertical="true"
         android:layout_alignLeft="@+id/user"
-        android:layout_alignStart="@+id/user" />
+        android:layout_alignStart="@+id/user"
+        android:inputType="textPassword"/>
 
     <EditText
         android:layout_width="wrap_content"
@@ -31,7 +32,8 @@
         android:id="@+id/confirm"
         android:hint="Confirmar"
         android:layout_below="@+id/pass"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:inputType="textPassword"/>
 
     <EditText
         android:layout_width="wrap_content"
