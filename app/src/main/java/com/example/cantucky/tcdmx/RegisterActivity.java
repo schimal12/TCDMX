@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public int hash(String s){
-        int hash = 7;
+        int hash = (int)Math.random();
         for(int i = 0; i<s.length();i++){
             hash=hash*31+s.charAt(i);
         }
