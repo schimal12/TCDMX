@@ -17,7 +17,9 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.android.volley.DefaultRetryPolicy;
 import com.android.volley.Response;
+import com.android.volley.RetryPolicy;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.JsonObjectRequest;
@@ -106,7 +108,7 @@ public class PlacasActivity extends AppCompatActivity {
 
     private void consumirJsonPlacas(String url) {
         progressDialog.show();
-        Log.d("Entre","entre");
+        Log.d("Entre", "entre");
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(url, new Response.Listener<JSONObject>() {
             @Override
             public void onResponse(JSONObject response) {
@@ -134,7 +136,6 @@ public class PlacasActivity extends AppCompatActivity {
                     numeroinfraccionesT.setText("Numero de Infracciones: " + numeroInfracciones);
                     Log.d("Carro",carro.getResultado());
                 } catch (JSONException e) {
-                    // TODO Auto-generated catch block
                     e.printStackTrace();
                 }
                 progressDialog.dismiss();
@@ -145,6 +146,9 @@ public class PlacasActivity extends AppCompatActivity {
                 error.printStackTrace();
             }
         });
+        int timeOut = 10000;
+        RetryPolicy retryPolicy = new DefaultRetryPolicy(timeOut,DefaultRetryPolicy.DEFAULT_MAX_RETRIES, DefaultRetryPolicy.DEFAULT_BACKOFF_MULT);
+        jsonObjectRequest.setRetryPolicy(retryPolicy);
         Volley.newRequestQueue(this).add(jsonObjectRequest);
     }
 

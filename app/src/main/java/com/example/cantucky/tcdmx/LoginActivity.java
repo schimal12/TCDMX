@@ -101,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
             intento.putExtra("mensaje", mensaje);
 
         }else{
-            if(res.equals("DOBLECER)")){
+            if(res.equals("DOBLECERO")){
                 String mensaje = "No Circulas Hoy";
                 intento.putExtra("mensaje", mensaje);
 
