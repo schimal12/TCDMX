@@ -1,0 +1,52 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.cantucky.tcdmx.FragmentoPerfil">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bienvenido: "
+        android:id="@+id/BienvenidoPerfil"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="33dp"
+        android:layout_gravity="center_horizontal|top" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Placa de tu carro:"
+        android:id="@+id/PlacaPerfil"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_gravity="center" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Número de infracciones: "
+        android:id="@+id/InfraccionesPerfil"
+        android:layout_marginTop="63dp"
+        android:layout_below="@+id/PlacaPerfil"
+        android:layout_alignLeft="@+id/BienvenidoPerfil"
+        android:layout_alignStart="@+id/BienvenidoPerfil"
+        android:layout_gravity="left|center_vertical" />
+
+    <TextView
+        android:layout_marginBottom="70dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Marca de tu carro: "
+        android:id="@+id/CochePerfil"
+        android:layout_below="@+id/BienvenidoPerfil"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="99dp"
+        android:layout_gravity="left|bottom" />
+
+
+</FrameLayout>

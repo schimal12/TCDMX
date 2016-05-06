@@ -68,4 +68,15 @@
     <string name="botonPrincipal1">Menú</string>
     <string name="informacionNoCircula">Informacion</string>
     <string name="TuPlacaNoCircula" />
+    <string name="title_activity_perfil_video">perfilVideo</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="bienvenidosVa">Bienvenido</string>
+    <string name="perfilUsuarios" />
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -55,7 +55,7 @@ public class LoginActivity extends AppCompatActivity {
         if (userString.equals(usuarioBase)) {
 
             if (passString.equals(usuarioPass)) {
-                Intent it = new Intent(this, MenuPerfilPrincipal.class);
+                Intent it = new Intent(this, perfilVideo.class);
                 it.putExtra("Usuario",user.getText().toString());
                 it.putExtra("placa",placa);
                 startActivity(it);
