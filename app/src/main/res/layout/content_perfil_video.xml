@@ -13,7 +13,7 @@
     tools:showIn="@layout/app_bar_perfil_video">
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/image"
         android:layout_width="300dp"
         android:layout_height="200dp"
         android:paddingTop="@dimen/nav_header_vertical_spacing"

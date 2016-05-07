@@ -1,5 +1,7 @@
 package com.example.cantucky.tcdmx;
 
+import android.content.Intent;
+import android.media.Image;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -12,12 +14,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.vuforia.VIEW;
+
+import org.w3c.dom.Text;
 
 public class perfilVideo extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-    private TextView textView;
+    private TextView textView, textView1;
     private String usuario;
+    private ImageView imageView;
     private String placa;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +36,10 @@ public class perfilVideo extends AppCompatActivity implements NavigationView.OnN
         Bundle extras = getIntent().getExtras();
         usuario= extras.getString("Usuario");
         placa = extras.getString("placa");
-
+        textView = (TextView)findViewById(R.id.textView5);
+        textView1 = (TextView)findViewById(R.id.textView4);
+        imageView = (ImageView)findViewById(R.id.image);
+        textView.setText(usuario);
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,14 +103,17 @@ public class perfilVideo extends AppCompatActivity implements NavigationView.OnN
             bundle.putString("Usuario1", usuario);
             FragmentoPerfil fragmentoPerfil = new FragmentoPerfil();
             fragmentoPerfil.setArguments(bundle);
+            textView.setVisibility(View.GONE);
+            textView1.setVisibility(View.GONE);
+            imageView.setVisibility(View.GONE);
             getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, fragmentoPerfil).commit();
 //            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor,new InicioFragment()).commit();
-
-
         } else if (id == R.id.nav_gallery){
-
-
-
+            getSupportFragmentManager().beginTransaction().replace(R.id.contenedor, new fragmentoYoutube()).commit();
+        } else if(id == R.id.menuPrincipal){
+            Intent it1 = new Intent(this, MainActivity.class);
+            it1.putExtra("placa",placa);
+            startActivity(it1);
         }
 
 

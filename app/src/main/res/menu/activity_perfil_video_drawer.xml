@@ -5,11 +5,15 @@
         <item
             android:id="@+id/nav_camera"
             android:icon="@drawable/ic_perfil"
-            android:title="Import" />
+            android:title="Perfil" />
         <item
             android:id="@+id/nav_gallery"
             android:icon="@drawable/ic_videos"
-            android:title="Gallery" />
+            android:title="Vídeos" />
+        <item
+            android:id="@+id/menuPrincipal"
+            android:icon="@drawable/ic_media_play"
+            android:title="Menú Principal" />
 
     </group>
 </menu>

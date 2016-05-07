@@ -139,7 +139,7 @@ public class FragmentoPerfil extends Fragment {
             try {
                 JSONObject json = new JSONObject(result);
                 JSONObject consulta = json.getJSONObject("consulta");
-                JSONObject tenencias = consulta.getJSONObject("tenencias");
+                //JSONObject tenencias = consulta.getJSONObject("tenencias");
                 JSONArray infracciones1 = consulta.getJSONArray("infracciones");
                 numeroInfracciones = infracciones1.length();
                 JSONArray verificaciones = consulta.getJSONArray("verificaciones");
