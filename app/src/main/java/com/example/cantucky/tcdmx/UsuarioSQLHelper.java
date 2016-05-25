@@ -28,7 +28,7 @@ public class UsuarioSQLHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        db.execSQL("DROP table IF Exists " + "Animales");
+        db.execSQL("DROP table IF Exists " + "Usuarios");
         db.execSQL(creacion);
     }
 }
